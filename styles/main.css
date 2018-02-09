@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Raleway');
+@font-face {
+    font-family: "Laborate";
+    src: url("laborate.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #64B5F6;
+}
+
+p {
+  font-size: 16pt;
+}
+
+#pageback {
+  background: white;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  #pageback {
+    width: 100%;
+    position: absolute;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset;
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+h1 {
+  margin: 40px 20px 30px;
+  font-family: "Libre Barcode 39 Text";
+  font-weight: normal;
+  font-size: 40pt;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 24pt;
+  }
+}
+h2 {
+  font-size: 28pt;
+  margin: 80px 0 0;
+  color: #FF7043;
+}
+
+h2.top {
+  margin: 20px 0;
+}
+
+hr {
+  background: rgba(0, 0, 0, 1);
+  border: none;
+  width: 20%;
+  height: 1px;
+  margin-top: 20px; margin-bottom: 40px;
+}
+
+.col-default {
+  width: calc(33.33% - 4px);
+}
+
+.col-full {
+  width: calc(100% - 4px);
+}
+
+[class*="col-"] {
+  position: relative;
+  float: left;
+  padding: 150px 15px;
+  height: 300px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 2px;
+}
+[class*="col-"] p {
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 20pt;
+  width: 92%;
+}
+[class*="col-"] h3 {
+  margin: 0;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-size: 20pt;
+}
+[class*="col-"] h4 {
+  margin: 0;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
+
+@media screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: calc(100% - 4px);
+  }
+  .empty {
+    display: none;
+  }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.censor {
+  font-family: Laborate;
+  color: transparent;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+.date {
+  color: grey;
+}
+.post-title {
+  color: #BF360C;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.5em;
+}
+
+a {
+  color: inherit;
+}
+h1 a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+dl {
+  margin: auto;
+  width: 65%;
+}
+dt {
+  margin: 10px 0;
+}
+dt::before {
+  content: "Q: "
+}
+dd {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+dd::before {
+  content: "A: "
+}
+
+@media screen and (max-width: 768px) {
+  dl {
+    width: 95%
+  }
+}
+
+.work p {
+  font-weight: bold;
+}
