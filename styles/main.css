@@ -1,44 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Raleway');
 @font-face {
-    font-family: "Laborate";
-    src: url("Laborate.ttf") format("truetype");
+  font-family: "Laborate";
+  src: url("Laborate.ttf") format("truetype");
 }
 
 * {
-    box-sizing: border-box;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-  background: #64B5F6;
+  box-sizing: border-box;
 }
 
 p {
   font-size: 16pt;
 }
-
-#pageback {
-  background: white;
-  width: 70%;
-  margin: auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  position: relative;
+.censor {
+  font-family: Laborate;
+  color: transparent;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
 }
-
-@media screen and (max-width: 768px) {
-  #pageback {
-    width: 100%;
-    position: absolute;
-    border-radius: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset;
-  }
-}
-
 h1, h2 {
   text-align: center;
 }
@@ -59,9 +36,34 @@ h2 {
   margin: 80px 0 0;
   color: #FF7043;
 }
-
 h2.top {
   margin: 20px 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #64B5F6;
+}
+
+#pageback {
+  background: white;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #pageback {
+    width: 100%;
+    position: absolute;
+    border-radius: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset;
+  }
 }
 
 hr {
@@ -75,11 +77,9 @@ hr {
 .col-default {
   width: calc(33.33% - 4px);
 }
-
 .col-full {
   width: calc(100% - 4px);
 }
-
 [class*="col-"] {
   position: relative;
   float: left;
@@ -98,20 +98,21 @@ hr {
   font-size: 20pt;
   width: 92%;
 }
-[class*="col-"] h3 {
+[class*="col-"] .post-title {
   margin: 0;
   position: absolute;
   top: 3%;
   left: 3%;
   font-size: 20pt;
+  color: #BF360C;
 }
-[class*="col-"] h4 {
+[class*="col-"] .date {
   margin: 0;
   position: absolute;
   bottom: 3%;
   right: 3%;
+  color: grey;
 }
-
 @media screen and (max-width: 768px) {
   [class*="col-"] {
     width: calc(100% - 4px);
@@ -120,23 +121,10 @@ hr {
     display: none;
   }
 }
-
 .row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.censor {
-  font-family: Laborate;
-  color: transparent;
-  text-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
-}
-.date {
-  color: grey;
-}
-.post-title {
-  color: #BF360C;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 footer {
@@ -148,11 +136,10 @@ footer {
 a {
   color: inherit;
 }
-h1 a {
+a:hover {
   text-decoration: none;
 }
-
-a:hover {
+h1 a {
   text-decoration: none;
 }
 
@@ -160,12 +147,19 @@ dl {
   margin: auto;
   width: 65%;
 }
+@media screen and (max-width: 768px) {
+  dl {
+    width: 95%
+  }
+}
+
 dt {
   margin: 10px 0;
 }
 dt::before {
   content: "Q: "
 }
+
 dd {
   font-weight: bold;
   margin-left: 10px;
@@ -173,12 +167,6 @@ dd {
 }
 dd::before {
   content: "A: "
-}
-
-@media screen and (max-width: 768px) {
-  dl {
-    width: 95%
-  }
 }
 
 .work p {
