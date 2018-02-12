@@ -1,0 +1,154 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Raleway')
+@font-face
+  font-family: "Laborate"
+  src: url("Laborate.ttf") format("truetype")
+
+$backgroundColor: #64B5F6
+$sectionTitleColor: #FF7043
+$postTitleColor: #BF360C
+$censorBlur: 12px
+$phone: "(max-width: 768px)"
+$backShadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+
+*
+  box-sizing: border-box
+body
+  font-family: "Raleway", sans-serif
+  background: $backgroundColor
+
+p
+  font-size: 16pt
+.censor
+  font-family: Laborate
+  color: transparent
+  text-shadow: 0 0 $censorBlur rgba(0, 0, 0, 0.8)
+
+h1, h2
+  text-align: center
+h1
+  margin: 40px 20px 30px
+  font:
+    family: "Libre Barcode 39 Text"
+    weight: normal
+    size: 40pt
+
+  @media #{$phone}
+    font:
+      family: "Raleway", sans-serif
+      size: 24pt
+h2
+  font-size: 28pt
+  margin: 80px 0 0
+  color: $sectionTitleColor
+  .top
+    margin: 20px 0
+
+#pageback
+  background: white
+  width: 70%
+  margin: auto
+  padding: 20px
+  border-radius: 8px
+  box-shadow: $backShadow
+  overflow: hidden
+  position: relative
+
+  @media #{$phone}
+    width: 100%
+    position: absolute
+    border-radius: 0
+    left: 0
+    right: 0
+    box-shadow: $backShadow inset
+
+hr
+  background: rgba(0, 0, 0, 1)
+  border: none
+  width: 20%
+  height: 1px
+  margin:
+    top: 20px
+    bottom: 40px
+
+%column
+  position: relative
+  float: left
+  padding: 150px 15px
+  height: 300px
+  text-align: center
+  border: 1px solid black
+  margin: 2px
+
+  p
+    margin: 0
+    position: absolute
+    transform: translate(-50%, -50%)
+    top: 50%
+    left: 50%
+    font-size: 16pt
+    width: 92%
+  .post-title
+    margin: 0
+    position: absolute
+    top: 3%
+    left: 3%
+    font-size: 20pt
+    color: $postTitleColor
+  .date
+    margin: 0
+    position: absolute
+    bottom: 3%
+    right: 3%
+    color: grey
+
+.col-full
+  @extend %column
+  width: calc(100% - 4px)
+
+.col-default
+  @extend %column
+  width: calc(100% / 3 - 4px)
+  @media #{$phone}
+    width: calc(100% - 4px)
+    &.empty
+      display: none
+
+.work p
+  font-weight: bold
+
+.row::after
+  content: ""
+  clear: both
+  display: table
+
+footer
+  text-align: center
+  margin-top: 20px
+  line-height: 1.5em
+
+a
+  color: inherit
+  &:hover, h1 &
+    text-decoration: none
+
+dl
+  margin: auto
+  width: 65%
+  @media #{$phone}
+    width: 95%
+
+dt
+  margin: 10px 0
+  &::before
+    content: "Q: "
+
+dd
+  font-weight: bold
+  margin:
+    left: 10px
+    bottom: 30px
+  &::before
+    content: "A: "
