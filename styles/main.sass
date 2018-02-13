@@ -5,11 +5,12 @@
 @font-face
   font-family: "Laborate"
   src: url("Laborate.ttf") format("truetype")
+  src: url("Laborate.eot")
 
 $backgroundColor: #64B5F6
 $sectionTitleColor: #FF7043
 $postTitleColor: #BF360C
-$censorBlur: 12px
+$censorBlur: 4px
 $phone: "(max-width: 768px)"
 $backShadow: 0 2px 4px rgba(0, 0, 0, 0.5)
 
@@ -23,8 +24,7 @@ p
   font-size: 16pt
 .censor
   font-family: Laborate
-  color: transparent
-  text-shadow: 0 0 $censorBlur rgba(0, 0, 0, 0.8)
+  filter: blur($censorBlur)
 
 h1, h2
   text-align: center
