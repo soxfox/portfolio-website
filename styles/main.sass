@@ -107,6 +107,10 @@ hr
     bottom: 3%
     right: 3%
     color: grey
+  @media #{$phone}
+    width: calc(100% - 4px) !important
+    &.empty
+      display: none
 
 .col-full
   @extend %column
@@ -120,10 +124,6 @@ hr
   @extend %column
   // Stupid hack for IE. DO NOT REMOVE.
   width: calc(100% / 3 - 4.01px)
-  @media #{$phone}
-    width: calc(100% - 4px)
-    &.empty
-      display: none
 
 .work p
   font-weight: bold
