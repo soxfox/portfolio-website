@@ -1,4 +1,5 @@
 **/.DS_Store
 styles/main.css*
 .vscode/settings.json
-styles/.sass-cache
+.sass-cache/**
+styles/.sass-cache/**
