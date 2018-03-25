@@ -7,5 +7,5 @@ This website was created at the beginning of VCE Computing Units 1-2. It will be
 
 ## Projects so far:
 - [x] Data and Graphic Solutions ([Infographic](https://soxfox.github.io/portfolio-website/infographic.html))
-- [ ] Networks
+- [x] Networks
 - [ ] Collaborative Web Development
